@@ -1,0 +1,8 @@
+# Do not include the view files saved by vim
+vim/view/
+
+#Or the recent operations performed in vim
+.viminfo
+
+#Similarily ignore the bash history
+.bash_history
