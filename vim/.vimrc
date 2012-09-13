@@ -5,7 +5,8 @@
 "   http://items.sjbach.com/319/configuring-vim-right
 
 " Enable pathogen to manage vim plugins
-" call pathogen#infect()
+call pathogen#infect()
+call pathogen#helptags()
 
 set t_Co=256
 colorscheme xoria256
@@ -110,8 +111,8 @@ nnoremap <leader><space> :noh<cr>
 "set formatoptions=qrn1
 "set colorcolumn=85
 " Use a subtle color fo the column limit
-highlight ColorColumn guibg=Gray7
-highlight ColorColumn ctermbg=233
+"highlight ColorColumn guibg=Gray7
+"highlight ColorColumn ctermbg=233
 
 
 " Set the file size (in MB) for the LargeFile plugin
