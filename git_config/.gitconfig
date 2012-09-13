@@ -5,3 +5,7 @@
 	helper = cache --timeout=3600
 [color]
 	ui = true
+[diff]
+	tool = tkdiff
+[difftool]
+	prompt = false
