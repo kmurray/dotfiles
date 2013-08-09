@@ -122,6 +122,9 @@ let g:LargeFile=200
 set guioptions+=LlRrb "Must set before unsetting (bug workaround)
 set guioptions-=LlRrb
 
+" Fix systemverilog file detection
+au! BufRead,BufNewFile *.sv setfiletype verilog
+
 " Disable arrowkeys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -157,3 +160,8 @@ noremap <silent> ,ml <C-W>L
 noremap <silent> ,mk <C-W>K
 noremap <silent> ,mh <C-W>H
 noremap <silent> ,mj <C-W>J
+
+" Buffer switching commands
+noremap <silent> ,bs :b#<CR>
+noremap <silent> ,bn :bn<CR>
+noremap <silent> ,bp :bp<CR>
