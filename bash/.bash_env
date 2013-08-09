@@ -1,6 +1,13 @@
-export V2B_REGRESSION_BASE_DIR=~/dev/trees/vqm_to_blif/REG_TEST
-export QII_BASE_DIR=~/altera/12.0/quartus/bin
+export QUARTUS_ROOTDIR=~/altera/12.0/quartus
+export QII_BASE_DIR=$QUARTUS_ROOTDIR/bin
+export MODELSIM_ROOTDIR=/home/kmurray/altera/12.0/modelsim_ae/bin
+
 export VPR_BASE_DIR=~/dev/trees/vtr-verilog-to-routing/vpr/
+export TITAN_BASE_DIR=~/dev/trees/titan
+export VQM2BLIF_BASE_DIR=~/dev/trees/vqm_to_blif
+export V2B_REGRESSION_BASE_DIR=$VQM2BLIF_BASE_DIR/REG_TEST
+
+export FP_BASE_DIR=~/dev/trees/fpga_floorplanner
 
 #Force Q2 to run in 64 bit mode
 export QUARTUS_64BIT=1
@@ -19,8 +26,12 @@ Cntxt Sw   (vol): %w"
 
 #Add Extra directories onto PATH
 export PATH=$PATH:$QII_BASE_DIR
+export PATH=$PATH:$MODELSIM_ROOTDIR
 export PATH=$PATH:~/bin
-export PATH=$PATH:~/dev/trees/vtr-verilog-to-routing/vpr
-export PATH=$PATH:~/dev/trees/vqm_to_blif/
+export PATH=$PATH:$VPR_BASE_DIR
+export PATH=$PATH:$VQM2BLIF_BASE_DIR
+export PATH=$PATH:$TITAN_BASE_DIR/scripts
+export PATH=$PATH:$FP_BASE_DIR
+export PATH=$PATH:/usr/NX/bin/
 
 
