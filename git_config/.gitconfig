@@ -16,3 +16,4 @@
 
 [alias]
     dt = difftool
+    st = status

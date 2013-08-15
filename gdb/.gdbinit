@@ -1,4 +1,4 @@
-source stl_views.gdb
+source ~/dotfiles/gdb/stl_views.gdb
 
 #
 # C++ related beautifiers (optional)

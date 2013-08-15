@@ -114,6 +114,16 @@ nnoremap <leader><space> :noh<cr>
 "highlight ColorColumn guibg=Gray7
 "highlight ColorColumn ctermbg=233
 
+" Line Wrapping
+set textwidth=72
+"augroup vimrc_autocmds
+    "autocmd BufEnter * highlight OverLength ctermbg=233 guibg=#592929
+    "autocmd BufEnter * match OverLength /\%85v.*/
+"augroup END
+
+"Line wrapping is usually determined by file type, but this lets us turn
+"it off
+noremap <silent> ,tw :set formatoptions-=t<CR>
 
 " Set the file size (in MB) for the LargeFile plugin
 let g:LargeFile=200
@@ -135,7 +145,7 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-" Move windows
+" Move window focus
 noremap <silent> ,h :wincmd h<CR>
 noremap <silent> ,j :wincmd j<CR>
 noremap <silent> ,k :wincmd k<CR>
@@ -155,7 +165,7 @@ noremap <silent> ,ch :wincmd h<CR>:close<CR>
 noremap <silent> ,cl :wincmd l<CR>:close<CR>
 noremap <silent> ,cc :close<CR>
 "noremap <silent> ,cw :cclose<CR>"What does this do?
-" Move windows
+" Move window location
 noremap <silent> ,ml <C-W>L
 noremap <silent> ,mk <C-W>K
 noremap <silent> ,mh <C-W>H
@@ -165,3 +175,13 @@ noremap <silent> ,mj <C-W>J
 noremap <silent> ,bs :b#<CR>
 noremap <silent> ,bn :bn<CR>
 noremap <silent> ,bp :bp<CR>
+
+
+"-----------------------------------------------------------------------------
+"" NERD Tree Plugin Settings
+"-----------------------------------------------------------------------------
+"" Toggle the NERD Tree on an off with F7
+nmap <F7> :NERDTreeToggle<CR>
+
+" Close the NERD Tree with Shift-F7
+nmap <S-F7> :NERDTreeClose<CR>

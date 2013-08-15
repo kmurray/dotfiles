@@ -3,6 +3,9 @@ vim/view/
 
 #Or the recent operations performed in vim
 .viminfo
+.netrwhist
 
 #Similarily ignore the bash history
 .bash_history
+
+
