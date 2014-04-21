@@ -26,11 +26,17 @@ alias gvim='UBUNTU_MENUPROXY= gvim'
 #Use the real time command not the bash built in
 alias time='/usr/bin/time'
 
+#Make ifstat print on a single line
+alias ifstat='ifstat -S'
+
 #Make a directory and then move too it
 my_md() { mkdir $@; cd $@; }
 my_mdp() { mkdir -p $@; cd $@; }
 alias md=my_md
 alias mdp=my_mdp
+
+#Fix issues with NX and svn prompint for password to 'null' keyring
+alias fix_svn_keyring='rm ~/.gnome2/keyrings/login.keyring'
 
 ##Directory shortcuts
 alias vb='cd `dirname $V2B_REGRESSION_BASE_DIR`'

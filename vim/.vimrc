@@ -73,8 +73,12 @@ filetype indent on
 let mapleader = ","
 
 " Try smart case searching... don't know how well this will work
-set ignorecase
-set smartcase
+" This can cause issues with search and replace,
+" when you try to replace something in lower case, it
+" will also try to replace upper case versions as well.
+" This is usually not what you want in code.
+"set ignorecase
+"set smartcase
 
 " Effective buffer management
 " Turning this on allows vim to put buffers in the background
@@ -115,7 +119,7 @@ nnoremap <leader><space> :noh<cr>
 "highlight ColorColumn ctermbg=233
 
 " Line Wrapping
-set textwidth=72
+set textwidth=0 "Don't autowrap
 "augroup vimrc_autocmds
     "autocmd BufEnter * highlight OverLength ctermbg=233 guibg=#592929
     "autocmd BufEnter * match OverLength /\%85v.*/
@@ -134,6 +138,15 @@ set guioptions-=LlRrb
 
 " Fix systemverilog file detection
 au! BufRead,BufNewFile *.sv setfiletype verilog
+
+" Use C++11 Syntax files
+au BufRead,BufNewFile *.cpp set syntax=cpp11
+au BufRead,BufNewFile *.hpp set syntax=cpp11
+
+" Speed-up autocomplete by not checking include files
+set complete-=i
+
+let no_plugin_maps=1
 
 " Disable arrowkeys
 inoremap  <Up>     <NOP>
@@ -185,3 +198,4 @@ nmap <F7> :NERDTreeToggle<CR>
 
 " Close the NERD Tree with Shift-F7
 nmap <S-F7> :NERDTreeClose<CR>
+
