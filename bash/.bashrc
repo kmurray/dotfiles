@@ -54,9 +54,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[$(tput setaf 5)\]\A\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[$(tput setaf 5)\]\A\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\A\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\A\u@\h \w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -95,6 +95,17 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
+#Environments for CAD tools
+if [ -f ~/.bash_tool_env ]; then
+    . ~/.bash_tool_env
+fi
+
+#Personal environment settings
+if [ -f ~/.bash_env ]; then
+    . ~/.bash_env
+fi
+
+#Personal aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -104,9 +115,5 @@ fi
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
-fi
-
-if [ -f ~/.bash_env ]; then
-    . ~/.bash_env
 fi
 

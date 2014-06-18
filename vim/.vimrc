@@ -73,6 +73,7 @@ filetype indent on
 let mapleader = ","
 
 " Try smart case searching... don't know how well this will work
+"
 " This can cause issues with search and replace,
 " when you try to replace something in lower case, it
 " will also try to replace upper case versions as well.
@@ -96,8 +97,10 @@ set lazyredraw
 set foldminlines=3
 
 " Save cursor position and folding in a file when restarting vim
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview 
+"
+" This can use up a lot of disk space for large files
+"autocmd BufWinLeave *.* mkview
+"autocmd BufWinEnter *.* silent loadview 
 
 "Gvim remove menu bar
 set guioptions-=m

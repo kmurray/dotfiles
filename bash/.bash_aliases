@@ -20,8 +20,8 @@ alias connect_vnc='ssh -L 5942:localhost:5942 -N -f navy.eecg.utoronto.ca'
 alias connect_ug_vnc='ssh -L 5942:localhost:5942 -N -f ug180'
 alias sshfs_mount_scinet_scraths='sshfs login.scinet.utoronto.ca:/scratch/v/vaughn/kmurray ~/sshfs_mounts/scinet_scratch/'
 
-#Make sure gvim doesn't spew a global menu warning
-alias gvim='UBUNTU_MENUPROXY= gvim'
+#Make sure gvim doesn't spew glib-Critical warnings
+alias gvim='gvim 2>/dev/null'
 
 #Use the real time command not the bash built in
 alias time='/usr/bin/time'
@@ -38,10 +38,15 @@ alias mdp=my_mdp
 #Fix issues with NX and svn prompint for password to 'null' keyring
 alias fix_svn_keyring='rm ~/.gnome2/keyrings/login.keyring'
 
+alias x11vnc_enable_repeat='x11vnc -R repeat'
+alias x11vnc_disable_repeat='x11vnc -R norepeat'
+alias x11vnc_show_repeat='x11vnc -Q repeat'
+
 ##Directory shortcuts
-alias vb='cd `dirname $V2B_REGRESSION_BASE_DIR`'
-alias wk='cd ~/dev/work'
+alias prj='cd $PROJECT'
+alias tre='cd $PROJECT_TREES'
+alias wrk='cd $PROJECT_WORK'
 alias vp='cd $VPR_BASE_DIR'
-alias tr='cd ~/dev/trees'
+alias vb='cd `dirname $V2B_REGRESSION_BASE_DIR`'
 alias kdoc='cd ~/Documents/Kevin'
 alias fp='cd $FP_BASE_DIR'
