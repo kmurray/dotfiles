@@ -141,10 +141,13 @@ set guioptions-=LlRrb
 
 " Fix systemverilog file detection
 au! BufRead,BufNewFile *.sv setfiletype verilog
+au! BufRead,BufNewFile *.tpp setfiletype cpp
+au! BufRead,BufNewFile *.net setfiletype xml
 
 " Use C++11 Syntax files
 au BufRead,BufNewFile *.cpp set syntax=cpp11
 au BufRead,BufNewFile *.hpp set syntax=cpp11
+au BufRead,BufNewFile *.tpp set syntax=cpp11
 
 " Speed-up autocomplete by not checking include files
 set complete-=i

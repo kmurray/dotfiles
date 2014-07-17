@@ -18,7 +18,7 @@ alias quartus_13.0='~/altera/13.0/quartus/bin/quartus'
 alias connect_svn='ssh -N -f -L 3690:islanders.eecg.utoronto.ca:3690 ra.eecg.utoronto.ca'
 alias connect_vnc='ssh -L 5942:localhost:5942 -N -f navy.eecg.utoronto.ca'
 alias connect_ug_vnc='ssh -L 5942:localhost:5942 -N -f ug180'
-alias sshfs_mount_scinet_scraths='sshfs login.scinet.utoronto.ca:/scratch/v/vaughn/kmurray ~/sshfs_mounts/scinet_scratch/'
+alias sshfs_mount_scinet_scratch='sshfs login.scinet.utoronto.ca:/scratch/v/vaughn/kmurray ~/sshfs_mounts/scinet_scratch/'
 
 #Make sure gvim doesn't spew glib-Critical warnings
 alias gvim='gvim 2>/dev/null'

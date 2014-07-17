@@ -54,7 +54,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[$(tput setaf 5)\]\A\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$ '
+    export GIT_PS1_SHOWDIRTYSTATE=1
+    PS1='${debian_chroot:+($debian_chroot)}\[$(tput setaf 5)\]\A\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\[\033[01;33m\]$(__git_ps1)\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\A\u@\h \w\$ '
 fi

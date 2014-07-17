@@ -34,4 +34,5 @@ export PATH=$PATH:$FP_BASE_DIR
 export PATH=$PATH:$FP_BASE_DIR/scripts
 export PATH=$PATH:/usr/NX/bin/
 
+export PYTHONPATH=$PYTHONPATH:$PROJECT_TREES/scinet_scripts
 
