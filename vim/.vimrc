@@ -152,6 +152,16 @@ au BufRead,BufNewFile *.tpp set syntax=cpp11
 " Speed-up autocomplete by not checking include files
 set complete-=i
 
+" Don't do word-wrap line breaks mid-word
+set linebreak
+
+" For .tex files, allow vertical movement within a single word-wrapped line
+au Bufread,BufNewFile *.tex nnoremap j gj
+au Bufread,BufNewFile *.tex nnoremap k gk
+au Bufread,BufNewFile *.tex vnoremap j gj
+au Bufread,BufNewFile *.tex vnoremap k gk
+
+
 let no_plugin_maps=1
 
 " Disable arrowkeys
