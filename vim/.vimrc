@@ -161,6 +161,16 @@ au Bufread,BufNewFile *.tex nnoremap k gk
 au Bufread,BufNewFile *.tex vnoremap j gj
 au Bufread,BufNewFile *.tex vnoremap k gk
 
+" Turn on spellcheck where it is important
+" Note: [s and ]s cycle through misspelled words
+"       z= lists alternatives
+"       zg adds to dictionary
+"       zug un-adds to dictionary
+au Bufread,BufNewFile *.tex setlocal spell spelllang=en_ca
+au FileType gitcommit setlocal spell spelllang=en_ca
+au FileType svn setlocal spell spelllang=en_ca
+
+
 
 let no_plugin_maps=1
 
@@ -175,36 +185,38 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 " Move window focus
-noremap <silent> ,h :wincmd h<CR>
-noremap <silent> ,j :wincmd j<CR>
-noremap <silent> ,k :wincmd k<CR>
-noremap <silent> ,l :wincmd l<CR>
+noremap <silent> <leader>h :wincmd h<CR>
+noremap <silent> <leader>j :wincmd j<CR>
+noremap <silent> <leader>k :wincmd k<CR>
+noremap <silent> <leader>l :wincmd l<CR>
 " Previous window
-noremap <silent> ,p :wincmd p<CR>
+noremap <silent> <leader>p :wincmd p<CR>
 " Resize windows
 noremap <silent> <C-F9> :vertical resize -10<CR>
 noremap <silent> <C-F10> :resize +10<CR>
 noremap <silent> <C-F11> :resize -10<CR>
 noremap <silent> <C-F12> :vertical resize +10<CR>
-noremap <silent> ,s8 :vertical resize 83<CR>
+noremap <silent> <leader>s8 :vertical resize 83<CR>
 " Close windows
-noremap <silent> ,cj :wincmd j<CR>:close<CR>
-noremap <silent> ,ck :wincmd k<CR>:close<CR>
-noremap <silent> ,ch :wincmd h<CR>:close<CR>
-noremap <silent> ,cl :wincmd l<CR>:close<CR>
-noremap <silent> ,cc :close<CR>
-"noremap <silent> ,cw :cclose<CR>"What does this do?
+noremap <silent> <leader>cj :wincmd j<CR>:close<CR>
+noremap <silent> <leader>ck :wincmd k<CR>:close<CR>
+noremap <silent> <leader>ch :wincmd h<CR>:close<CR>
+noremap <silent> <leader>cl :wincmd l<CR>:close<CR>
+noremap <silent> <leader>cc :close<CR>
+"noremap <silent> <leader>cw :cclose<CR>"What does this do?
 " Move window location
-noremap <silent> ,ml <C-W>L
-noremap <silent> ,mk <C-W>K
-noremap <silent> ,mh <C-W>H
-noremap <silent> ,mj <C-W>J
+noremap <silent> <leader>ml <C-W>L
+noremap <silent> <leader>mk <C-W>K
+noremap <silent> <leader>mh <C-W>H
+noremap <silent> <leader>mj <C-W>J
 
 " Buffer switching commands
-noremap <silent> ,bs :b#<CR>
-noremap <silent> ,bn :bn<CR>
-noremap <silent> ,bp :bp<CR>
+noremap <silent> <leader>bs :b#<CR>
+noremap <silent> <leader>bn :bn<CR>
+noremap <silent> <leader>bp :bp<CR>
 
+" Toggle spell check
+noremap <silent> <leader>s :setlocal spell! spelllang=en_ca<CR>
 
 "-----------------------------------------------------------------------------
 "" NERD Tree Plugin Settings
