@@ -5,7 +5,9 @@ vim/view/
 .viminfo
 .netrwhist
 
+#Also the default vim spelling dictionary
+*.spl
+
 #Similarily ignore the bash history
 .bash_history
-
 
