@@ -1,6 +1,7 @@
 export PROJECT=/project
 export PROJECT_TREES=$PROJECT/trees
 export PROJECT_WORK=$PROJECT/work
+export PROJECT_TOOLS=$PROJECT/tools
 
 
 export VPR_BASE_DIR=$PROJECT_TREES/vtr_trunk_git/vpr
@@ -9,6 +10,8 @@ export VQM2BLIF_BASE_DIR=$PROJECT_TREES/vqm_to_blif
 export V2B_REGRESSION_BASE_DIR=$VQM2BLIF_BASE_DIR/REG_TEST
 
 export FP_BASE_DIR=$PROJECT_TREES/fpga_floorplanner
+
+export NETBEANS_BASE_DIR=$PROJECT_TOOLS/netbeans/netbeans-8.0
 
 
 #Format string for the time command
@@ -33,6 +36,13 @@ export PATH=$PATH:$TITAN_BASE_DIR/scripts
 export PATH=$PATH:$FP_BASE_DIR
 export PATH=$PATH:$FP_BASE_DIR/scripts
 export PATH=$PATH:/usr/NX/bin/
+export PATH=$PATH:$NETBEANS_BASE_DIR/bin
 
 export PYTHONPATH=$PYTHONPATH:$PROJECT_TREES/scinet_scripts
 
+#Cilk gcc setup
+#CILK_DIR=/project/trees/gcc_4.9_cilkplus
+#export PATH=$CILK_DIR/cilkplus-install/bin:$PATH
+#export CPATH=$CILK_DIR/cilkplus-install/include:$CPATH
+#export LIBRARY_PATH=$CILK_DIR/cilkplus-install/lib:$CILK_DIR/cilkplus-install/lib64:$LIBRARY_PATH
+#export LD_LIBRARY_PATH=$CILK_DIR/cilkplus-install/lib:$CILK_DIR/cilkplus-install/lib64:$LD_LIBRARY_PATH

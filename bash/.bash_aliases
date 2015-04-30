@@ -35,12 +35,13 @@ my_mdp() { mkdir -p $@; cd $@; }
 alias md=my_md
 alias mdp=my_mdp
 
-#Fix issues with NX and svn prompint for password to 'null' keyring
+#Fix issues with NX and svn promping for password to 'null' keyring
 alias fix_svn_keyring='rm ~/.gnome2/keyrings/login.keyring'
 
 alias x11vnc_enable_repeat='x11vnc -R repeat'
 alias x11vnc_disable_repeat='x11vnc -R norepeat'
 alias x11vnc_show_repeat='x11vnc -Q repeat'
+alias x11vnc_restart='echo "Run at commandline: cat /etc/init/x11vnc.conf | grep exec and run result"'
 
 ##Directory shortcuts
 alias prj='cd $PROJECT'
