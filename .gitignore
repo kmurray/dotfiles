@@ -8,4 +8,10 @@ vim/view/
 #Similarily ignore the bash history
 .bash_history
 
-
+#Also vim swap files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
