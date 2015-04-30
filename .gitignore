@@ -1,3 +1,6 @@
+# Do not include vim bundles, since they are managed by Vundle
+vim/bundle/
+
 # Do not include the view files saved by vim
 vim/view/
 
