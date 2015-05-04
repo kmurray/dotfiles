@@ -21,3 +21,6 @@ vim/view/
 Session.vim
 .netrwhist
 *~
+
+#Python
+*.pyc

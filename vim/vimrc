@@ -11,6 +11,10 @@
 " Grab bundles via :PluginInstall using Vundle
 runtime bundles.vim
 
+" YouCompleteMe config
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+let g:ycm_enable_diagnostic_signs = 0
+
 " Setup colour scheme
 set t_Co=256
 colorscheme xoria256

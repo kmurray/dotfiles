@@ -32,6 +32,11 @@ Plugin 'tpope/vim-repeat'
 " Code auto-completion
 Plugin 'Valloric/YouCompleteMe'
 
+" Config detection for YCM
+"   Generates .ycm_extra_conf.py
+"   :YcmGenerateConfig
+Plugin 'rdnetto/YCM-Generator'
+
 " Finally finish things off
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
