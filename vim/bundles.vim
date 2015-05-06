@@ -46,6 +46,9 @@ Plugin 'airblade/vim-gitgutter'
 " Snazy status bar
 Plugin 'bling/vim-airline'
 
+" Ack integration
+Plugin 'mileszs/ack.vim'
+
 " Finally finish things off
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

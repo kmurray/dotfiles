@@ -80,7 +80,7 @@ set number
 set wrapscan
 
 " XML folding
-"   see :help folds for commands (e.g. zo - open, zc - close) 
+"   see :help folds for commands (e.g. zo - open, zc - close)
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
@@ -116,7 +116,7 @@ set foldminlines=3
 "
 " This can use up a lot of disk space for large files
 "autocmd BufWinLeave *.* mkview
-"autocmd BufWinEnter *.* silent loadview 
+"autocmd BufWinEnter *.* silent loadview
 
 "Gvim remove menu bar
 set guioptions-=m
@@ -233,6 +233,10 @@ noremap <silent> <leader>bp :bp<CR>
 
 " Toggle spell check
 noremap <silent> <leader>s :setlocal spell! spelllang=en_ca<CR>
+
+" Next change (git)
+noremap <silent> <leader>nc :GitGutterNextHunk<CR>
+noremap <silent> <leader>pc :GitGutterPrevHunk
 
 "-----------------------------------------------------------------------------
 "" NERD Tree Plugin Settings
