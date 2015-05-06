@@ -37,6 +37,15 @@ Plugin 'Valloric/YouCompleteMe'
 "   :YcmGenerateConfig
 Plugin 'rdnetto/YCM-Generator'
 
+" Git integration
+Plugin 'tpope/vim-fugitive'
+
+" Git change marks
+Plugin 'airblade/vim-gitgutter'
+
+" Snazy status bar
+Plugin 'bling/vim-airline'
+
 " Finally finish things off
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

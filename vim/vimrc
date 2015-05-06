@@ -12,8 +12,17 @@
 runtime bundles.vim
 
 " YouCompleteMe config
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+
+" Don't show errors to the left of line numbers
 let g:ycm_enable_diagnostic_signs = 0
+" Don't prompt for loading extra_conf under these directories
+let g:ycm_extra_conf_globlist = ['/project/trees/*']
+" Auto-close the semantic completion window
+"let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_autoclose_preview_window_after_insertion = 1
+
+
 
 " Setup colour scheme
 set t_Co=256
@@ -31,7 +40,11 @@ set ch=1
 
 " Set the status line
 set laststatus=2
-set statusline=%<%f\ %h%w%m%r%y%=Line:%l/%L\ (%p%%)\ Col:%c
+"set statusline=%<%f\ %h%w%m%r%y%=Line:%l/%L\ (%p%%)\ Col:%c
+
+" vim-airline status bar config
+let g:airline_powerline_fonts = 1
+set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
 " Make the 'cw' and like commands put a $ at the end instead of just deleting
 " the text and replacing it
