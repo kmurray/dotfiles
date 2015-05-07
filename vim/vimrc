@@ -44,7 +44,8 @@ set laststatus=2
 
 " vim-airline status bar config
 let g:airline_powerline_fonts = 1
-set guifont=Liberation\ Mono\ for\ Powerline\ 10
+"set guifont=Liberation\ Mono\ for\ Powerline\ 10
+set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
 
 " Make the 'cw' and like commands put a $ at the end instead of just deleting
 " the text and replacing it
@@ -214,11 +215,11 @@ noremap <silent> <C-F11> :resize -10<CR>
 noremap <silent> <C-F12> :vertical resize +10<CR>
 noremap <silent> <leader>s8 :vertical resize 83<CR>
 " Close windows
-noremap <silent> <leader>cj :wincmd j<CR>:close<CR>
-noremap <silent> <leader>ck :wincmd k<CR>:close<CR>
-noremap <silent> <leader>ch :wincmd h<CR>:close<CR>
-noremap <silent> <leader>cl :wincmd l<CR>:close<CR>
-noremap <silent> <leader>cc :close<CR>
+"noremap <silent> <leader>cj :wincmd j<CR>:close<CR>
+"noremap <silent> <leader>ck :wincmd k<CR>:close<CR>
+"noremap <silent> <leader>ch :wincmd h<CR>:close<CR>
+"noremap <silent> <leader>cl :wincmd l<CR>:close<CR>
+"noremap <silent> <leader>cc :close<CR>
 "noremap <silent> <leader>cw :cclose<CR>"What does this do?
 " Move window location
 noremap <silent> <leader>ml <C-W>L
@@ -236,7 +237,7 @@ noremap <silent> <leader>s :setlocal spell! spelllang=en_ca<CR>
 
 " Next change (git)
 noremap <silent> <leader>nc :GitGutterNextHunk<CR>
-noremap <silent> <leader>pc :GitGutterPrevHunk
+noremap <silent> <leader>pc :GitGutterPrevHunk<CR>
 
 "-----------------------------------------------------------------------------
 "" NERD Tree Plugin Settings
