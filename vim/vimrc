@@ -20,7 +20,7 @@ let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_extra_conf_globlist = ['/project/trees/*']
 " Auto-close the semantic completion window
 "let g:ycm_autoclose_preview_window_after_completion = 1
-"let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 
 
