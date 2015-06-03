@@ -8,6 +8,7 @@ alias p='pushd'
 alias o='popd'
 alias h='history'
 alias grep='grep --color'
+alias ack='ack-grep'
 alias mtail='multitail'
 
 ## Quartus
