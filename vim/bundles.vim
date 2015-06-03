@@ -49,6 +49,11 @@ Plugin 'bling/vim-airline'
 " Ack integration
 Plugin 'mileszs/ack.vim'
 
+" CSV file handling, including
+" column arranging
+"  :%ArrangeColumn
+Plugin 'chrisbra/csv.vim'
+
 " Finally finish things off
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
